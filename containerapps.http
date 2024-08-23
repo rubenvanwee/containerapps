@@ -1,0 +1,6 @@
+@containerapps_HostAddress = http://localhost:5047
+
+GET {{containerapps_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
