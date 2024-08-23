@@ -10,8 +10,12 @@ pool:
   name: default
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: AzureContainerApps@1
+  inputs:
+    azureSubscription: 'sub-az204(1c5e67d1-4882-4179-8e89-dbbf8ee45c7a)'
+    imageToDeploy: 'acrapl2003rvwee23aug.azurecr.io/aspnetcorecontainer:latest'
+    containerAppName: 'aca-apl2003'
+    resourceGroup: 'containerapps-rg'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
